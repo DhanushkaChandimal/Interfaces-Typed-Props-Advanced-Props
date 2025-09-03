@@ -1,8 +1,10 @@
+import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import type { Person, ProfileProps } from './models/Person.model';
 import PersonComponent from './components/PersonComponent';
 import Status from './components/Status';
 import Header from './components/Header';
+import NestedComponent from './components/NestedComponent';
 import Card from 'react-bootstrap/Card';
 
 function App() {
@@ -28,6 +30,13 @@ function App() {
       <Status />
       <Header>Hey there buddy!</Header>
       <Header children={'children message'}/>
+
+      <NestedComponent>
+          <h3>This is a children component</h3>
+          <Status />
+      </NestedComponent>
+      <NestedComponent children={<Status />}/>
+
     </div>
   );
 }
