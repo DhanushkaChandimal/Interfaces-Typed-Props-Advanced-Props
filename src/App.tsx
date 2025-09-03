@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import type { Person, ProfileProps } from './models/Person.model';
 import PersonComponent from './components/PersonComponent';
+import Status from './components/Status';
 import Card from 'react-bootstrap/Card';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <PersonComponent {...profileData}/>
         </Card.Body>
       </Card>
+      <Status />
     </div>
   );
 }
