@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import type { Person, ProfileProps } from './models/Person.model';
 import PersonComponent from './components/PersonComponent';
 import Status from './components/Status';
+import Header from './components/Header';
 import Card from 'react-bootstrap/Card';
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
         </Card.Body>
       </Card>
       <Status />
+      <Header>Hey there buddy!</Header>
+      <Header children={'children message'}/>
     </div>
   );
 }
