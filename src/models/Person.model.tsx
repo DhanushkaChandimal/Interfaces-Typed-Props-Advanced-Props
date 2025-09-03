@@ -3,3 +3,8 @@ export interface Person {
     age: number;
     email?: string;
 }
+
+export interface ProfileProps {
+    person: Person,
+    message: string
+}
