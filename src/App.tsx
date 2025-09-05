@@ -5,6 +5,7 @@ import PersonComponent from './components/PersonComponent';
 import Status from './components/Status';
 import Header from './components/Header';
 import NestedComponent from './components/NestedComponent';
+import Button from './components/Button'
 import Card from 'react-bootstrap/Card';
 
 function App() {
@@ -17,6 +18,10 @@ function App() {
     person: student,
     message: 'This is a message from the parent component.'
   }
+
+  const handleClick = () => {
+    console.log('Button clicked');
+  } 
 
   console.log({profileData});
 
@@ -36,7 +41,8 @@ function App() {
           <Status />
       </NestedComponent>
       <NestedComponent children={<Status />}/>
-
+      
+      <Button onClick={handleClick}/>
     </div>
   );
 }
